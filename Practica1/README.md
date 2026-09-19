@@ -1,4 +1,4 @@
-Objetivi de la practica:
+Objetivo de la practica:
 El objetivo de esta practica es aprender como instalar una versión de Haskell en nuestro respectivo sistema operativo. Así como el seguir familiarizandonos con la plataforma de Github para que cada vez seamos mucho más rapidos a la hora de trabajar. Tambien el conocer un poco más acerca de Haskell al realizar un pequeña investigación para contestar algunas preguntas.
 
 Tiempo requerido en realizar la práctica completa:
