@@ -1,0 +1,16 @@
+¿Cuáles son las principales diferencias entre Haskell y Rust?
+
+R= Rust tiene un sintaxis muy similar a la de C++, por lo que sus bloques de código se encuentran delimitados por llaves y cierran en punto y coma(;); Permite desarrollar programas del lado del cliente y del servidor mejorando la calidad del software; Está orientado a objetos; Gestionan automáticamente el guardado; Compilación nativa y estática; Multiplataforma y multiparadigmático. Haskell es puramente funcional, no hay declaraciones o instrucciones, solo expresiones que no pueden mutar variables; Tiene inferencia de tipos, no se tienes que escribir explícitamente todo; Es perezoso, las funciones no se evalúan hasta que sea necesario; Es concurrente, con su compilador GHC, viene un "recolector de basura"paralelo y de alto rendimiento lo que limpia la memoria de forma automática.
+
+¿Por qué Haskell no ha alcanzado una adopción significativa en la industria del software?
+R= Considero que Haskell no se ha terminado de implementar aun más  en la industria debido a que es puramente funcional y muy apegado a funciones matemáticas. Aunque sea un lenguaje muy completo y de cierta manera fácil de entender, es mayormente utilizado para trabajos que involucren matemáticas como: mapeo de algoritmos matemático, aplicaciones para la seguridad de la red, programas para modelar cálculos complejos. Y por supuesto también está orientado a la eseñansa.
+
+Si tuvieras que explicarle a una persona que no es de CC la función que cumple Git frente a la de Github, ¿Cómo se lo explicarías?
+R= Que Git vendría siendo nuestro "Word", donde trabajamos en un "texto", al cual cualquier cambio que hagamos se guarda y podemos regresar a ver como se veía ese "texto" al inicio, o cualquier otra versión del "archivo" para compararlos. Y  Github seria subir ese archivo de "Word" y todas sus versiones a un "Drive" para que otros puedan consultarlo, hacerle cambios, etc. Al hacer uso de estas herramientas simultáneamente tenemos un trabajo más eficaz y colaborativo.
+
+Fuentes:
+
+1.- Admin. (2023, 30 junio). ¿Para qué se usa Haskell? Bambu Mobile. https://bambu-mobile.com/para-que-se-usa-haskell/
+2.- Duò, M. (2025, 1 octubre). Git vs GitHub: ¿Cuál es la Diferencia y cómo Empezar? Kinsta®. https://kinsta.com/es/blog/git-vs-github/
+3.- Haskell Language. (s. f.). https://www.haskell.org/
+4.- Muradas, Y. (2020, 17 febrero). Qué es Rust. OpenWebinars.net. https://openwebinars.net/blog/que-es-rust/
