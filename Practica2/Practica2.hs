@@ -32,3 +32,14 @@ cashback x = x / 10
 
 cashbackMonto :: Float -> Float
 cashbackMonto x = x * 0.10
+
+
+{-
+ Función: minutosHoras
+ Descirpción: Recibe un valor de tiempo en minutos
+ y devuelve cuanto es en horas.
+ Uso: minutosHoras 60 = 1
+-}
+
+minutosHoras :: Float -> Float
+minutosHoras x = x / 60
