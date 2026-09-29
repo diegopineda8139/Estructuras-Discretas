@@ -20,3 +20,11 @@ reconversion x = x / 1000
 
 cashback :: Float -> Float
 cashback x = x / 10
+
+
+{-
+ Función: cashback
+ Descirpción: Recibe un monto (parametro numércio) y realiza
+ una devolución del 10% en puntos a la tarjeta de credito.
+ Uso: cashback 2545 = 264
+-}
