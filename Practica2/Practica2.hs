@@ -38,8 +38,11 @@ cashbackMonto x = x * 0.10
  Función: minutosHoras
  Descirpción: Recibe un valor de tiempo en minutos
  y devuelve cuanto es en horas.
- Uso: minutosHoras 60 = 1
+ Uso: minutosHoras 60 = 1 hora
 -}
 
-minutosHoras :: Float -> Float
-minutosHoras x = x / 60
+minutosHoras :: Int -> IO()
+minutosHoras x =
+  if (x `div` 60 == 1)
+  then putStrLn (show (x `div` 60) ++ " hora ")
+  else putStrLn (show (x `div` 60) ++ " horas ")
