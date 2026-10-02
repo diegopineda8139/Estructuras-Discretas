@@ -8,7 +8,7 @@
 -}
 
 reconversion :: Double -> Double 
-reconversion x = x / 1000
+reconversion re = re / 1000
 
 
 {-
@@ -19,7 +19,7 @@ reconversion x = x / 1000
 -}
 
 cashback :: Float -> Float
-cashback x = x / 10
+cashback cashPuntos = cashPuntos / 10
 
 
 {-
@@ -31,7 +31,7 @@ cashback x = x / 10
 -}
 
 cashbackMonto :: Float -> Float
-cashbackMonto x = x * 0.10
+cashbackMonto cashReal = cashReal * 0.10
 
 
 {-
