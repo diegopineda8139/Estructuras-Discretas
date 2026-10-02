@@ -72,6 +72,21 @@ esEstafa costo billeteGrande billeteExacto cambio =
   else True
 
 
+{-
+ Función: esDescendente
+ Descirpción: Recibe cuatro parámetros de tipo numérico x, y, z Y w.
+ La función debe devolver una valor de tipo booleano de acuerdo
+ a los siguientes casos: True, si fueron ingresados de manera descendente
+ y False, si no.
+ Uso: esDescendente 4 3 2 1, True
+-}
+
+esDescendente :: Float -> Float -> Float -> Float -> Bool
+esDescendente x y z w =
+  if x > y && y > z && z > w
+  then True
+  else False
+
 
 
 
