@@ -4,7 +4,7 @@
  Función: reconversion
  Descirpción: Recibe un parámetro numércio y realiza
  una reconversión monetaria quitándole tres ceros al valor ingresado.
- Uso: reconversión 1000 = 1
+ Uso: reconversion 1000 = 1
 -}
 
 reconversion :: Float -> Float 
@@ -14,7 +14,7 @@ reconversion re = re / 1000
 {-
  Función: cashback
  Descirpción: Recibe un monto (parametro numércio) y realiza
- una devolución del 10% en puntos a la tarjeta de credito.
+ una devolución del 10% en puntos a la tarjeta de crédito.
  Uso: cashback 2545 = 254.5
 -}
 
@@ -24,7 +24,7 @@ cashback cashPuntos = cashPuntos / 10
 
 {-
  Función: cashbackMonto
- Descirpción: Recibe un monto de puntos de la tarjeta de credito
+ Descirpción: Recibe un monto de puntos de la tarjeta de crédito
  (parametro numércio) y muestra el valor de los puntos en dinero real.
  Cada punto equivale a $0.10.
  Uso: cashbackMonto 254.5 = 25.45
