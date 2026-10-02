@@ -60,7 +60,7 @@ minutosHoras x =
  exacto de la compra, devolver el primer billete pero no recibir
  el cambio que este dio al principio. Si es estafa regresa un valor
  booleano, True si es estafa, False si no.
- Uso: esEstafa 100 200 100 0, True 
+ Uso: esEstafa 100 200 100 0 = True 
 -}
 
 esEstafa :: Float -> Float -> Float -> Float -> Bool
@@ -78,7 +78,7 @@ esEstafa costo billeteGrande billeteExacto cambio =
  La función debe devolver una valor de tipo booleano de acuerdo
  a los siguientes casos: True, si fueron ingresados de manera descendente
  y False, si no.
- Uso: esDescendente 4 3 2 1, True
+ Uso: esDescendente 4 3 2 1 = True
 -}
 
 esDescendente :: Float -> Float -> Float -> Float -> Bool
@@ -88,6 +88,11 @@ esDescendente x y z w =
   else False
 
 
-
-
-  
+{-
+ Función: imc
+ Descirpción: La función imc debe recibir dos parámetros,
+ el primero de ellos los kg, el segundo los centimetros y
+ devolver tu imc de acuerdo la interpretación según la OMS:
+ bajo, normal, sobrepeso, obesidad.
+ Uso: imc 53.5 161 = normal
+-}
