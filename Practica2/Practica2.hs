@@ -117,3 +117,10 @@ imc kg m =
  Uso: hipotenusa 9.0 12.0 = 15.0
 -}
 
+hipotenusa :: Float -> Float -> Float 
+hipotenusa b h = sqrt (b^2 + h^2)  
+
+  
+
+
+
