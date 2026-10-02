@@ -38,7 +38,7 @@ cashbackMonto x = x * 0.10
  Función: minutosHoras
  Descirpción: Recibe un valor de tiempo en minutos
  y devuelve cuanto es en horas.
- Uso: minutosHoras 60 = 1 hora
+ Uso: minutosHoras 60 = 1 hora y 0 minutos
 -}
 
 minutosHoras :: Int -> String
@@ -50,4 +50,29 @@ minutosHoras x =
   (if x `mod` 60 == 1
   then show (x `mod` 60) ++ " minuto "
   else show (x `mod` 60) ++ " minutos ")
+
+
+{-
+ Función: esEstafa
+ Descirpción: Detectar si un comerciante está siendo
+ estafado al reicibir un billite de alta denominación,
+ dar el cambio correspondiente pero luego recibir el pago
+ exacto de la compra, devolver el primer billete pero no recibir
+ el cambio que este dio al principio. Si es estafa regresa un valor
+ booleano, True si es estafa, False si no.
+ Uso: esEstafa 100 200 100 0, True 
+-}
+
+esEstafa :: Float -> Float -> Float -> Float -> Bool
+esEstafa costo billeteGrande billeteExacto cambio =
+  if billeteGrande > costo &&
+  billeteExacto == costo &&
+  cambio == billeteGrande - billeteExacto
+  then False
+  else True
+
+
+
+
+
   
