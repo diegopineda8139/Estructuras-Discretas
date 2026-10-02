@@ -132,3 +132,16 @@ hipotenusa b h = sqrt (b^2 + h^2)
 
 pendiente :: (Float, Float) -> (Float, Float) -> Float
 pendiente (x1, y1) (x2,y2) = (y2 - y1) / (x2 - x1)
+
+
+{-
+ Función: distanciaPuntos
+ Descirpción: Se reciben dos parámetros que serán tuplas de dos
+ elementos de tipo flotante repectivamente, es decir (x1, y1) y (x2, y2).
+ pendiente debe devolver un valor de tipo flotante que represente
+ la distancia entre los dos puntos.
+ Uso: distanciaPuntos (2.0, 1.0) (5.0, 5.0) = 5
+-}
+
+distanciaPuntos :: (Float, Float) -> (Float, Float) -> Float
+distanciaPuntos (x1, y1) (x2,y2) = sqrt ( (x2 - x1)^2 + (y2 - y1)^2 )
