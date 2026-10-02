@@ -99,13 +99,21 @@ esDescendente x y z w =
 
 imc :: Float -> Float -> IO()
 imc kg m =
-  if kg / (m * m) < 18.5
+  if kg / m^2 < 18.5
   then putStrLn ("Bajo Peso")
-  else ( if kg / (m * m) < 25.0
+  else ( if kg / m^2 < 25.0
    then putStrLn ("Peso normal")
-   else ( if kg / (m * m) < 30
+   else ( if kg / m^2 < 30
     then putStrLn ("Sobrepeso")
     else putStrLn ("Obesidad")))
-  
-         
-  
+
+
+{-
+ Función: hipotenusa
+ Descirpción: Recibe dos parametros de tipo flotante b y h,
+ donde b representa la base y h la altura. La función debe
+ devoler un valor de tipo flotante que represente el valor
+ de la hipotenusa de un triángulo rectangulo.
+ Uso: hipotenusa 9.0 12.0 = 15.0
+-}
+
