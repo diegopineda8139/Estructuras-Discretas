@@ -41,8 +41,13 @@ cashbackMonto x = x * 0.10
  Uso: minutosHoras 60 = 1 hora
 -}
 
-minutosHoras :: Int -> IO()
+minutosHoras :: Int -> String
 minutosHoras x =
-  if (x `div` 60 == 1)
-  then putStrLn (show (x `div` 60) ++ " hora ")
-  else putStrLn (show (x `div` 60) ++ " horas ")
+  (if x `div` 60 == 1
+  then show (x `div` 60) ++ " hora y "
+  else show (x `div` 60) ++ " horas y ")
+  ++
+  (if x `mod` 60 == 1
+  then show (x `mod` 60) ++ " minuto "
+  else show (x `mod` 60) ++ " minutos ")
+  
