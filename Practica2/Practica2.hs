@@ -91,8 +91,21 @@ esDescendente x y z w =
 {-
  Función: imc
  Descirpción: La función imc debe recibir dos parámetros,
- el primero de ellos los kg, el segundo los centimetros y
+ el primero de ellos los kg, el segundo metros y
  devolver tu imc de acuerdo la interpretación según la OMS:
  bajo, normal, sobrepeso, obesidad.
- Uso: imc 53.5 161 = normal
+ Uso: imc 53.5 1.61 = normal
 -}
+
+imc :: Float -> Float -> IO()
+imc kg m =
+  if kg / (m * m) < 18.5
+  then putStrLn ("Bajo Peso")
+  else ( if kg / (m * m) < 25.0
+   then putStrLn ("Peso normal")
+   else ( if kg / (m * m) < 30
+    then putStrLn ("Sobrepeso")
+    else putStrLn ("Obesidad")))
+  
+         
+  
