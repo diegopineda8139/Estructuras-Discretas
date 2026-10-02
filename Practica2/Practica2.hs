@@ -7,7 +7,7 @@
  Uso: reconversión 1000 = 1
 -}
 
-reconversion :: Double -> Double 
+reconversion :: Float -> Float 
 reconversion re = re / 1000
 
 
