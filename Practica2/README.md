@@ -2,4 +2,4 @@ Objetivo de la Práctica: Empezar a entender de mejor manera como funciona Haske
 
 Tiempo requerido: Aproximadamente unos 4 días, entre sesiones de 2 a 3 horas.
 
-![Foto](Evidenci.png)
+![Foto](Evidencia.png)
