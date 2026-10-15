@@ -1,4 +1,4 @@
-module Par_Y_Primo (esParBin, esPrimo) where
+module Funciones_Auxiliares (esParBin, esPrimo, divisores) where
 
 import Data.Bits
 
@@ -19,3 +19,12 @@ Uso: esPrimo 7 = True
 
 esPrimo :: Int -> Bool
 esPrimo p = length [x | x <- [1..p], p `mod` x == 0] == 2
+
+{-Función: divisores
+Descripción: Devuelve una lista de los divisores
+de un entero positivo.
+Uso: divisores 18 = [1, 2, 3, 6, 9, 18]
+-}
+
+divisores :: Int -> [Int]
+divisores n = [d | d <- [1..n], n `mod` d == 0]
