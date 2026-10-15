@@ -41,5 +41,14 @@ los primos.
 Uso: primos [1..20] = [2, 3, 5, 7, 11, 13, 17, 19]
 -}
 
-primos:: [Int] -> [Int]
+primos :: [Int] -> [Int]
 primos list = [x | x <- list, esPrimo x == True]
+
+{-Función: coprimos
+Descripción: Recibe un entero y duelve una
+lista de los coprimos de n.
+Uso: coprimos 10 = [1, 3, 7, 9]
+-}
+
+coprimos :: Int -> [Int]
+coprimos c = [x | x <- [1..c], c `mod` x == 0 || c `mod` x == 1] 
