@@ -1,0 +1,12 @@
+module Par_Binario (esParBin) where
+
+import Data.Bits
+
+{-Función: esParBin
+Descripción: Verifica si un entero es par
+de acuerdo a sus operaciones entre bits.
+Uso: esParBin = True
+-}
+
+esParBin :: Int -> Bool
+esParBin n = (n.&.1) == 0
