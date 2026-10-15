@@ -1,4 +1,4 @@
-import Par_Binario
+import Par_Y_Primo
 
 {-Función: cetes
 Descripción: ingresas el valor inicial, el plazo
@@ -33,4 +33,13 @@ Uso: soloPares [1, 2, 3, 4] = [2, 4]
 -}
 
 soloPares :: [Int] -> [Int]
-soloPares list = [x | x <- list, esParBin x == True] 
+soloPares list = [x | x <- list, esParBin x == True]
+
+{-Función: primos
+Descripción: Recibe una lista y devuelve
+los primos.
+Uso: primos [1..20] = [2, 3, 5, 7, 11, 13, 17, 19]
+-}
+
+primos:: [Int] -> [Int]
+primos list = [x | x <- list, esPrimo x == True]
