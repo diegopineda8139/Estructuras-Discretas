@@ -1,4 +1,4 @@
-import Par_Y_Primo
+import Funciones_Auxiliares
 
 {-Función: cetes
 Descripción: ingresas el valor inicial, el plazo
@@ -51,4 +51,4 @@ Uso: coprimos 10 = [1, 3, 7, 9]
 -}
 
 coprimos :: Int -> [Int]
-coprimos c = [x | x <- [1..c], c `mod` x == 0 || c `mod` x == 1] 
+coprimos c = [x | x <- [1..c], [d | d <- divisores x, c `mod` d == 0] == [1]]
