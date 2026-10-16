@@ -8,7 +8,7 @@ Uso: cetes 100 (Días 28) = 100.4
 -}
 
 cetes :: Float -> (String, Float) -> Float
-cetes valorI (r, t) = valorI * (1 + tasaRendimiento (r, t) * (t / 360))
+cetes valorI (r, t) = valorI * (1 + tasaRendimiento (r, t) * (mesesADias (r, t) / 360))
 
 {-Función: mensajeCetes
 Descripción: 
