@@ -1,4 +1,4 @@
-module Funciones_Auxiliares (esParBin, esPrimo, divisores, tasaRendimiento) where
+module Funciones_Auxiliares (esParBin, esPrimo, divisores, tasaRendimiento, mesesADias) where
 
 import Data.Bits
 
@@ -51,3 +51,20 @@ tasaRendimiento (r, t) =
       else (if r == "Días" && t == 364
        then 0.0744
        else 0 )))))
+
+{-Función: mesesADias
+Descripción: Recibe la tasa de rendimiento ingresada en meses
+y regresa cuanto tiempo es en días
+Uso: mesesADias ("Meses", 6) = 182
+-}
+mesesADias :: (String, Float) -> Float
+mesesADias (r, t) =
+  if r == "Meses" && t == 1
+  then 28
+  else (if r == "Meses" && t == 6
+   then 182
+   else (if r == "Meses" && t == 12
+    then 364
+    else (if r == "Días" && t >= 28
+     then t
+     else 0)))
