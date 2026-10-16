@@ -15,7 +15,8 @@ Descripción:
 Uso: mensajeCetes 
 -}
 
-
+mensajeCetes :: Float -> (String, Float) -> String
+mensajeCetes valorI (r, t) = " Despues de " ++ show (t) ++ " dias , obtuve " ++ show ( cetes valorI (r, t) - valorI) ++ " de rendimiento bruto sin asumir ningun riesgo crediticio . El monto total de mi inversion es de " ++ show (cetes valorI (r, t) ) 
 
 {-Función: negativos
 Descripción: Cuenta los números negativos

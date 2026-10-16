@@ -57,6 +57,7 @@ Descripción: Recibe la tasa de rendimiento ingresada en meses
 y regresa cuanto tiempo es en días
 Uso: mesesADias ("Meses", 6) = 182
 -}
+
 mesesADias :: (String, Float) -> Float
 mesesADias (r, t) =
   if r == "Meses" && t == 1
