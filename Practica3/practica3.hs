@@ -4,19 +4,22 @@ import Funciones_Auxiliares
 Descripción: ingresas el valor inicial, el plazo
 en Meses o Días y devuelve el monto final disponible
 al concluir el plazo seleccionado.
-Uso: cetes 100 (Días 28) = 100.4
+Uso: cetes 100 ("Días", 28) = 100.4
 -}
 
 cetes :: Float -> (String, Float) -> Float
 cetes valorI (r, t) = valorI * (1 + tasaRendimiento (r, t) * (mesesADias (r, t) / 360))
 
 {-Función: mensajeCetes
-Descripción: 
-Uso: mensajeCetes 
+Descripción: Recibe un monto inicial de inversión, un plazo
+expresado en días o meses  y devolver un mensaje que indique;
+El plazo de la inversión, el rendimiento bruto obtenido y
+el monto acumulado al finalizar el plazo.
+Uso: mensajeCetes 100 ("Días", 28) = "Despues de 28.0 dias , obtuve 0.47366333 de rendimiento bruto sin asumir ningun riesgo crediticio . El monto total de mi inversion es de 100.47366"
 -}
 
 mensajeCetes :: Float -> (String, Float) -> String
-mensajeCetes valorI (r, t) = " Despues de " ++ show (t) ++ " dias , obtuve " ++ show ( cetes valorI (r, t) - valorI) ++ " de rendimiento bruto sin asumir ningun riesgo crediticio . El monto total de mi inversion es de " ++ show (cetes valorI (r, t) ) 
+mensajeCetes valorI (r, t) = "Despues de " ++ show (t) ++ " dias , obtuve " ++ show ( cetes valorI (r, t) - valorI) ++ " de rendimiento bruto sin asumir ningun riesgo crediticio . El monto total de mi inversion es de " ++ show (cetes valorI (r, t) ) 
 
 {-Función: negativos
 Descripción: Cuenta los números negativos
