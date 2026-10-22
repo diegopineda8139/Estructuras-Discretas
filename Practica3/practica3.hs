@@ -2,8 +2,9 @@ import Funciones_Auxiliares
 
 {-Función: cetes
 Descripción: ingresas el valor inicial, el plazo
-en Meses o Días y devuelve el monto final disponible
-al concluir el plazo seleccionado.
+en Meses o Días en un tiempo de 28 días, 182 días o 364 días
+que equivalen a 1 mes, 6 meses y 12 meses respectivamente.
+Y devuelve el monto final disponible al concluir el plazo seleccionado.
 Uso: cetes 100 ("Días", 28) = 100.4
 -}
 
