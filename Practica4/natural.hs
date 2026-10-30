@@ -1,4 +1,4 @@
-data Natural = Cero | S Natural deriving (Eq, Show)
+import Auxiliares
 
 {-Función: a_natural
 Descrepción: Toma un entero (0, 1, 2,...)
@@ -33,6 +33,11 @@ la potencia del segundo.
 Uso: potenciaNat (Cero, Cero) = 1
 -}
 
+potenciaNat :: Natural -> Natural -> Natural
+
 -- Casos Bases
+potenciaNat m Cero = S Cero
+potenciaNat Cero n = Cero
 
-
+-- Casos Recursivos
+potenciaNat m (S n) = multiplica_nat m (potenciaNat m (n))

@@ -1,3 +1,5 @@
+module Auxiliares (Natural(..), suma_nat, multiplica_nat) where
+
 data Natural = Cero | S Natural deriving (Eq, Show)
 
 {-
@@ -20,4 +22,4 @@ suma_nat (S m) n = suma_nat m (S n)
 
 multiplica_nat :: Natural -> Natural -> Natural
 multiplica_nat Cero n = Cero
-multiplica_nat (S m) n =suma_nat n (multiplica_nat n m)
+multiplica_nat (S m) n = suma_nat n (multiplica_nat n m)
