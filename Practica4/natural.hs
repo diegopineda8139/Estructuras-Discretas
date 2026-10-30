@@ -7,7 +7,22 @@ Uso: a_natural 0 = Cero
 -}
 
 a_natural :: Int -> Natural
+
 -- Caso Base
 a_natural 0 = Cero
+
 -- Caso Recursivo
 a_natural n = S( a_natural (n - 1))
+
+{-Función: a_entero
+Descrepción: Toma un Natural y lo pasa a entero.
+Uso: a_entero Cero = 0
+-}
+
+a_entero :: Natural -> Int
+
+-- Caso Base
+a_entero Cero = 0
+
+-- Caso Recursivo
+a_entero (S n) = 1 + a_entero n
