@@ -30,7 +30,7 @@ a_entero (S n) = 1 + a_entero n
 {-Función: potenciaNat
 Descrepción: Eleva un número natural a
 la potencia del segundo.
-Uso: potenciaNat (Cero, Cero) = 1
+Uso: potenciaNat Cero Cero = 1
 -}
 
 potenciaNat :: Natural -> Natural -> Natural
@@ -41,3 +41,17 @@ potenciaNat Cero n = Cero
 
 -- Casos Recursivos
 potenciaNat m (S n) = multiplica_nat m (potenciaNat m (n))
+
+{-Función: facNat
+Descrepción: Devuelve el factorial de
+un natural dado.
+Uso: facNat (S(S(S Cero))) = S ( S ( S ( S ( S ( S Cero ) ) ) ) )
+-}
+
+facNat :: Natural -> Natural
+
+-- Caso Base
+facNat Cero = S Cero
+
+-- Caso Recursivo
+facNat (S n) = multiplica_nat (S n) (facNat n) 
