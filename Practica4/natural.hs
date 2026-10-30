@@ -26,3 +26,13 @@ a_entero Cero = 0
 
 -- Caso Recursivo
 a_entero (S n) = 1 + a_entero n
+
+{-Función: potenciaNat
+Descrepción: Eleva un número natural a
+la potencia del segundo.
+Uso: potenciaNat (Cero, Cero) = 1
+-}
+
+-- Casos Bases
+
+
