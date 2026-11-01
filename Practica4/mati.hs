@@ -18,3 +18,20 @@ mayorIgual (Cont m2) Mati = True
 
 -- Caso Recursivo
 mayorIgual (Cont m1) (Cont m2) = mayorIgual m1 m2
+
+{-Función: aplana
+Descripción: Recibe una Matrioska y regresa
+una lista de todas las Matrioskas que la componen
+Uso: aplana Mati = [Mati]
+-}
+
+aplana :: Matrioska -> [Matrioska]
+
+-- Caso Base
+aplana Mati = [Mati]
+
+-- Caso Recursivo
+aplana (Cont m1) = Cont m1 : aplana m1
+
+
+
