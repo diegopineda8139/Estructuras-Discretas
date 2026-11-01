@@ -72,6 +72,3 @@ resta_ent Zero (Neg m) = Suc m
 
 -- Casos Recursivos
 resta_ent (Suc n) (Suc m) = resta_ent n m
-resta_ent (Neg n) (Neg m) = resta_ent n m
-resta_ent n (Neg m) = suma_ent n m
-resta_ent (Neg n) m = Neg (suma_ent n m)
