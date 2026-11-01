@@ -41,7 +41,7 @@ multiplica_nat (S m) n = suma_nat n (multiplica_nat n m)
 {-
  Función: suma_ent
  Descripción: Calcula la suma de dos enteros
- Uso 1: suma_ent (Suc (Suc ( Suc Zero))) (Neg ( Suc ( Suc Zero))) = Suc Zero
+ Uso 1: suma_ent (Suc(Suc(Suc Zero))) (Neg(Suc(Suc Zero))) = Suc Zero
  Uso 2: suma_ent (Neg(Suc (Suc ( Suc Zero)))) (Neg ( Suc ( Suc Zero))) = Neg (Suc (Suc (Suc (Suc (Suc Zero)))))
 -}
 

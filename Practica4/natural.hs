@@ -45,7 +45,7 @@ potenciaNat m (S n) = multiplica_nat m (potenciaNat m (n))
 {-Función: facNat
 Descripción: Devuelve el factorial de
 un natural dado.
-Uso: facNat (S(S(S Cero))) = S ( S ( S ( S ( S ( S Cero ) ) ) ) )
+Uso: facNat (S(S(S Cero))) = S ( S ( S ( S ( S ( S Cero )))))
 -}
 
 facNat :: Natural -> Natural
