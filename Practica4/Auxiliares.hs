@@ -1,7 +1,12 @@
-module Auxiliares (Natural(..), suma_nat, multiplica_nat, Entero(..), suma_ent, resta_ent) where
+module Auxiliares (Natural(..), suma_nat, multiplica_nat, Ent(..), suma_ent, resta_ent) where
+
+--Tipos de datos:
 
 data Natural = Cero | S Natural deriving (Eq, Show)
-data Entero = Zero | Succ Ent | Neg Ent deriving ( Eq, Show)
+
+data Ent = Zero | Suc Ent | Neg Ent deriving (Eq, Show)
+
+--Funciones:
 
 {-
  Función: suma_nat
@@ -11,7 +16,11 @@ data Entero = Zero | Succ Ent | Neg Ent deriving ( Eq, Show)
 -}
 
 suma_nat :: Natural -> Natural -> Natural
+
+-- Caso Base
 suma_nat Cero n = n
+
+-- Caso Recursivo
 suma_nat (S m) n = suma_nat m (S n)
 
 
@@ -22,14 +31,18 @@ suma_nat (S m) n = suma_nat m (S n)
 -}
 
 multiplica_nat :: Natural -> Natural -> Natural
+
+-- Caso Base
 multiplica_nat Cero n = Cero
+
+-- Caso Recursivo
 multiplica_nat (S m) n = suma_nat n (multiplica_nat n m)
 
 {-
  Función: suma_ent
  Descripción: Calcula la suma de dos enteros
- Uso 1: suma_ent (Succ (Succ ( Succ Zero))) (Neg ( Succ ( Succ Zero))) = Succ Zero
- Uso 2: suma_ent (Neg(Succ (Succ ( Succ Zero)))) (Neg ( Succ ( Succ Zero))) = Neg (Succ (Succ (Succ (Succ (Succ Zero)))))
+ Uso 1: suma_ent (Suc (Suc ( Suc Zero))) (Neg ( Suc ( Suc Zero))) = Suc Zero
+ Uso 2: suma_ent (Neg(Suc (Suc ( Suc Zero)))) (Neg ( Suc ( Suc Zero))) = Neg (Suc (Suc (Suc (Suc (Suc Zero)))))
 -}
 
 suma_ent :: Ent -> Ent -> Ent
@@ -39,10 +52,10 @@ suma_ent Zero m = m
 suma_ent n Zero = n
 
 -- Casos Recursivos
-suma_ent (Succ n) (Succ m) = Succ (suma_ent n (Succ m))
+suma_ent (Suc n) (Suc m) = Suc (suma_ent n (Suc m))
 suma_ent (Neg n) (Neg m) = Neg (suma_ent n m)
-suma_ent (Succ n) (Neg m) =  resta_ent (Succ n) m
-suma_ent (Neg n) (Succ m) = resta_ent (Succ m) n
+suma_ent (Suc n) (Neg m) =  resta_ent (Suc n) m
+suma_ent (Neg n) (Suc m) = resta_ent (Suc m) n
 
 
 {-
@@ -54,10 +67,11 @@ resta_ent :: Ent -> Ent -> Ent
 
 -- Casos Base
 resta_ent n Zero = n
-resta_ent Zero (Succ m) = Neg (Succ m)
-resta_ent Zero (Neg m) = Succ m
+resta_ent Zero (Suc m) = Neg (Suc m)
+resta_ent Zero (Neg m) = Suc m
 
 -- Casos Recursivos
-resta_ent (Succ n) (Succ m) = resta_ent n m
+resta_ent (Suc n) (Suc m) = resta_ent n m
 resta_ent (Neg n) (Neg m) = resta_ent n m
-resta_ent n (Neg m) = suma_ent n (Succ m)
+resta_ent n (Neg m) = suma_ent n m
+resta_ent (Neg n) m = Neg (suma_ent n m)
