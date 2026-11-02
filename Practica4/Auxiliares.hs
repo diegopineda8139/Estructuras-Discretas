@@ -47,7 +47,7 @@ multiplica_nat (S m) n = suma_nat n (multiplica_nat n m)
 
 suma_ent :: Ent -> Ent -> Ent
 
--- Casos Base (Identidad)
+-- Casos Base
 suma_ent Zero m = m
 suma_ent n Zero = n
 
@@ -72,3 +72,6 @@ resta_ent Zero (Neg m) = Suc m
 
 -- Casos Recursivos
 resta_ent (Suc n) (Suc m) = resta_ent n m
+resta_ent (Neg n) (Neg m) = resta_ent m n
+resta_ent n (Neg m) = suma_ent n m
+resta_ent (Neg n) (Suc m) = Neg (Suc (suma_ent n m))
